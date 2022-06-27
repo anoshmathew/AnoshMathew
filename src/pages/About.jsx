@@ -1,74 +1,111 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import styles from "../styles/About.module.css"
 import { motion } from "framer-motion"
-const animationConfiguration = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-};
+
 const timelineData = [
   {
-      text: 'Started working on the app-ideas repository',
-      date: 'February 25 2019',
+      text: 'Got Campus Placement and Was Introduced to Web Development',
+      date: 'June 2021',
       category: {
-    tag: 'app-ideas',
-    color: '#FFDB14'
-  },
-      link: {
-          url: 'https://github.com/florinpop17/app-ideas',
-          text: 'Check it out on GitHub'
-      }
-  },
-  {
-      text: 'Started the Weekly Coding Challenge program',
-      date: 'March 04 2019',
-      category: {
-    tag: 'blog',
-    color: '#e17b77'
-  },
-      link: {
-          url: 'https://florin-pop/blog/2019/03/weekly-coding-challenge/',
-          text: 'Check it out here'
-      }
-  },
-  {
-      text: 'Got 1.000 followers on Twitter',
-      date: 'March 07 2019',
-      category: {
-    tag: 'twitter',
-    color: '#1DA1F2'
-  },
-      link: {
-          url: 'https://twitter.com/florinpop1705',
-          text: 'See profile'
-      }
-  },
-  {
-      text:
-          'I published my first article in the FreeCodeCamp Medium Publication',
-      date: 'March 18 2019',
-      category: {
-    tag: 'medium',
-    color: '#018f69'
-  },
-      link: {
-          url:
-              'https://medium.freecodecamp.org/how-to-build-a-double-slider-sign-in-and-sign-up-form-6a5d03612a34',
-          text: 'Check it out here'
-      }
-  },
-  {
-      text: 'Over 12.000 views in a single day on my Medium posts',
-      date: 'April 05 2019',
-      category: {
-    tag: 'medium',
-    color: '#018f69'
-  },
-      link: {
-          url: 'https://medium.com/@popflorin1705',
-          text: 'See profile'
-      }
+    tag: 'The Beginning',
+    color: '#AFEAA1'
   }
+     
+  },
+  {
+      text: 'Started the Weekly Coding Challenge program at the Company on HTML, CSS, SQL ,ReactJs',
+      date: 'July 2021',
+      category: {
+    tag: 'Noob',
+    color: '#AFEAA1'
+  }
+  },
+  {
+      text: 'Fell In Love with Reactjs and Started doing simple projects',
+      date: 'August 2021',
+      category: {
+    tag: 'The Focus',
+    color: '#AACAA1'
+  }
+  },
+  {
+      text:'Deployed my first actual website on Github which was my first version of portfolio website using Reactjs, SCSS',
+      date: 'November 2021',
+      category: {
+    tag: 'Proud Moments',
+    color: '#AACAA1'
+  },
+      link: {
+          url:'https://anoshmathew.github.io/React-portfolio-website/',
+          text: 'Check it out here'
+      }
+  },
+  {
+      text: 'Started Learning core PHP because the company asked for it.',
+      date: 'January 2022',
+      category: {
+      tag: 'echo "Hello World!";',
+      color: '#AACAA1'
+  },
+      link: {
+          url: '',
+          text: 'See profile'
+      }
+  },
+  {
+    text: 'Did an admin panel for a company client in React, Bootstrap and he loved it',
+    date: 'Febraury - March 2022',
+    category: {
+  tag: 'The Motivation',
+  color: '#018f69'
+},
+    link: {
+        url: 'https://anoshmathew.github.io/Fishing-App-2/',
+        text: 'See profile'
+    }
+},
+{
+    text: "Did my first real PHP website with colleague's support",
+    date: 'April 2022',
+    category: {
+  tag: 'echo "Hello World!";',
+  color: '#018f69'
+},
+    link: {
+        //url: '',
+        text: 'Sorry!! Private'
+    }
+},
+{
+    text: "Had a concept of making a SAAS website and bought my first domain. Created the website using Reactjs, CSS for frontend and PHP, SQL for backend. Later Deployed!!",
+    date: 'April - May 2022 ',
+    category: {
+  tag: 'FullStack',
+  color: '#018f69'
+},
+    link: {
+        url: 'https://a4album.com/',
+        text: 'Comming Soon'
+    }
+},
+{
+  text: "Also working as freelance React, PHP developer for a startup company",
+  date: 'April - Present 2022 ',
+  category: {
+    tag: 'Too Busy',
+    color: '#018f69'
+  },
+
+},
+{
+    text: "Started Building less Chaotic Persional website using Reactjs and CSS. Spoiler Alert! You are viewing it now.",
+    date: 'June - Present 2022',
+    category: {
+  tag: 'Persional Website V2',
+  color: '#018f69'
+}
+},
+
 ]
 
 const TimelineItem = ({ data }) => (
@@ -102,13 +139,23 @@ const Timeline = () =>
       </div>
   );
 
-function About() {
+function About({setnavSelection}) {
+   
+        useEffect(() => {
+          updateNavSelection();
+      
+        }, [])
+      
+        function updateNavSelection()
+        {
+          setnavSelection("about")
+        }
   return (
     <motion.div 
        className={styles.aboutMain}
         initial={{width:0}}
         animate={{width:"100%"}}
-        exit={{x: window.innerWidth, transition:{duration:0.3}}}
+        exit={{x: window.innerWidth, transition:{duration:0}}}
        >
       <h1>About</h1>
         <Timeline/>

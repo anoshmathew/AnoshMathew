@@ -11,14 +11,14 @@
     height: 35px;
     position: fixed;
     bottom: 0px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar .centerPart{
     display:flex;
     height: 100%;
-padding-left: 30%;
-padding-right: 30%;
+    padding-left: 30%;
+    padding-right: 30%;
     justify-content: space-between;
     align-items: center;
     color:red;
@@ -31,6 +31,10 @@ padding-right: 30%;
 }
 
 .navbar .centerPart .link:hover{
-    color:rgb(254, 108, 108);
-    
+    color:#c1e1d1;
+}
+.linkActive{
+    color:#c1e1d1;
+    padding:0px 25px;
+    text-decoration: none;
 }

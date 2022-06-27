@@ -5,14 +5,15 @@ import Contact from '../pages/Contact';
 import About from '../pages/About';
 import { AnimatePresence } from "framer-motion"
 
-function AnimatedRoutes() {
+function AnimatedRoutes({navSelection,setnavSelection}) {
     const location = useLocation();
+    console.log(navSelection);
   return (
     <AnimatePresence>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home setnavSelection={setnavSelection}/>} />
+          <Route path="/about" element={<About setnavSelection={setnavSelection}/>} />
+          <Route path="/contact" element={<Contact setnavSelection={setnavSelection}/>} />
         </Routes>
       </AnimatePresence>
   )

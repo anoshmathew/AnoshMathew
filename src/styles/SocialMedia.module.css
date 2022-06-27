@@ -3,7 +3,6 @@
     left: 30px;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-
     position: fixed;
     height: 250px;
     width: 50px;
@@ -14,10 +13,10 @@
     justify-content: top;
    
 }
-.icons{
-    height: 80px;
-    width: 100%;
 
+.icons{
+    height: 85px;
+    width: 100%;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -25,6 +24,15 @@
     justify-content: space-between;
     margin-bottom: 10px;
 }
+
+.icons i{
+    color: #486255;
+}
+.icons i:hover{
+    color: #4862558a;
+    transform:scale(1.5);
+}
+
 .line{
     height: 40px;
     width: 2px;

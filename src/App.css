@@ -1,9 +1,10 @@
 *{
   margin: 0;
-  overflow-x:hidden;  
-
 }
 
+body{
+  background-color:#d8e8e0;
+}
 .App {
   text-align: center;
   overflow-y:hidden;  

@@ -7,13 +7,13 @@ function SocialMedia() {
       <div className={styles.socialMedia}>
         <div className={styles.icons}>
           <div className={styles.github}>
-            <i className='fa fa-github'></i>
+          <a href="https://github.com/anoshmathew" target="_blank"><i  className='fa fa-github'></i></a>
           </div>
           <div className={styles.envelope}>
-            <i className='fa fa-envelope'></i>
+            <a href="mailto:anosh.mathew99@gmail.com" target="_blank"><i className='fa fa-envelope'></i></a>
           </div>
           <div className={styles.phone}>
-            <i className='fa fa-phone'></i>
+            <a href="https://www.linkedin.com/in/anosh-mathew-b8313118b/" target="_blank"><i className='fa fa-linkedin'></i></a>
           </div>       
         </div>
         <div className={styles.line}>

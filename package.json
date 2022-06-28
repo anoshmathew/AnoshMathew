@@ -2,7 +2,7 @@
   "name": "portfolio2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://anoshmathew.github.io/AnoshMathew",
+  "homepage": "https://anoshmathew.com",
   "dependencies": {
     "-": "^0.0.1",
     "@fortawesome/fontawesome": "^1.1.8",

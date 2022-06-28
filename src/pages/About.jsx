@@ -46,11 +46,8 @@ const timelineData = [
       category: {
       tag: 'echo "Hello World!";',
       color: '#AACAA1'
-  },
-      link: {
-          url: '',
-          text: 'See profile'
-      }
+  }
+   
   },
   {
     text: 'Did an admin panel for a company client in React, Bootstrap and he loved it',
